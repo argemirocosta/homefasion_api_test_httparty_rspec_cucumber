@@ -1,5 +1,5 @@
 Dado('que acesso o endpoint {string}') do |endpoint|
-  $uri_base = 'http://localhost:8080/venda'+endpoint
+  $uri_base = 'http://localhost:8080'+endpoint
   log $uri_base
 end
 
