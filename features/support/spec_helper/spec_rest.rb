@@ -1,5 +1,5 @@
 module REST
-  def healthcheck
-    Rest::Healthcheck.new
+  def commons
+    Rest::Commons.new
   end
 end

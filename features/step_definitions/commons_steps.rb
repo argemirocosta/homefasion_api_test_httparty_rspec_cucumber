@@ -1,5 +1,5 @@
 Dado('que acesso o endpoint {string}') do |path|
-  @response = healthcheck.get_healthcheck(path)
+  @response = commons.get_commons(path)
 end
 
 Entao('verifico o status code {int}') do |code|
