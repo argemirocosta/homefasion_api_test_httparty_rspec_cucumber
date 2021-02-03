@@ -1,11 +1,5 @@
-Dado('que acesso o endpoint {string}') do |endpoint|
-  @uri_base = "http://localhost:8080#{endpoint}"
-  log @uri_base
-end
-
-Quando('autentico na API') do
-  auth = { username: 'usuario1', password: 'senha1' }
-  @response = HTTParty.get(@uri_base, basic_auth: auth)
+Dado('que acesso o endpoint {string}') do |path|
+  @response = healthcheck.get_healthcheck(path)
 end
 
 Entao('verifico o status code {int}') do |code|

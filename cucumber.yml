@@ -1,0 +1,8 @@
+default: -p html_report -p dev --publish
+
+### AMBIENTES ###
+dev: AMBIENTE=dev
+hml: AMBIENTE=hml
+
+### REPORTS ###
+html_report: --format pretty -f html -o report/features_report.html
