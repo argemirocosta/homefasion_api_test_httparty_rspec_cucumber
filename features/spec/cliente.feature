@@ -9,11 +9,13 @@ Funcionalidade: Testar as funcionalidade de Cliente
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
+  @listagem_geral
   Cenário: Verificar listagem de todos os clientes
     Dado que acesso o endpoint "/cliente"
     Entao verifico o status code 200
     E que o resultado não é nulo
 
+  @busca_especifica
   Cenário: Verificar busca de cliente específico
     Dado que acesso o endpoint "/cliente/" passando um id de cliente
     Entao verifico o status code 200

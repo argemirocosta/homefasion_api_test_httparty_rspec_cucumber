@@ -9,12 +9,13 @@ Funcionalidade: Testar as funcionalidade de Venda
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
+  @listagem_geral
   Cenário: Verificar listagem de todos as vendas
     Dado que acesso o endpoint "/venda"
     Entao verifico o status code 200
     E que o resultado não é nulo
 
-  @wip
+  @busca_especifica
   Cenário: Verificar busca de venda específica
     Dado que acesso o endpoint "/venda/" passando um id de venda
     Entao verifico o status code 200

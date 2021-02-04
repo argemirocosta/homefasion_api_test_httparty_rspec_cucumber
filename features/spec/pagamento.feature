@@ -9,11 +9,13 @@ Funcionalidade: Testar as funcionalidade de Pagamento
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
+  @listagem_geral
   Cenário: Verificar listagem de todos os pagamentos
     Dado que acesso o endpoint "/pagamento"
     Entao verifico o status code 200
     E que o resultado não é nulo
 
+  @busca_especifica
   Cenário: Verificar busca de pagamento específico
     Dado que acesso o endpoint "/pagamento/" passando um id de pagamento
     Entao verifico o status code 200
