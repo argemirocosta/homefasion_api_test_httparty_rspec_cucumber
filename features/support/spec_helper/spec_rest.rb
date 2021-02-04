@@ -6,4 +6,8 @@ module REST
   def cliente
     Rest::Cliente.new
   end
+
+  def usuario
+    Rest::Usuario.new
+  end
 end

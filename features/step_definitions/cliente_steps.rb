@@ -1,5 +1,5 @@
-Dado('que acesso o endpoint {string} passando um id') do |path|
-  @id_cliente = sort_id
+Dado('que acesso o endpoint {string} passando um id de cliente') do |path|
+  @id_cliente = sort_id('cliente')
   @response = cliente.get_cliente(path, @id_cliente)
 end
 

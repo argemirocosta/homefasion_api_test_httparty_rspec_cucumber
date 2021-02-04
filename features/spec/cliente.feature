@@ -16,6 +16,6 @@ Funcionalidade: Testar as funcionalidade de Cliente
 
   @wip
   Cenário: Verificar busca de cliente específico
-    Dado que acesso o endpoint "/cliente/" passando um id
+    Dado que acesso o endpoint "/cliente/" passando um id de cliente
     Entao verifico o status code 200
     E o id do cliente
