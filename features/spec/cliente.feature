@@ -14,7 +14,6 @@ Funcionalidade: Testar as funcionalidade de Cliente
     Entao verifico o status code 200
     E que o resultado não é nulo
 
-  @wip
   Cenário: Verificar busca de cliente específico
     Dado que acesso o endpoint "/cliente/" passando um id de cliente
     Entao verifico o status code 200

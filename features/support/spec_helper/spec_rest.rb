@@ -10,4 +10,8 @@ module REST
   def usuario
     Rest::Usuario.new
   end
+
+  def pagamento
+    Rest::Pagamento.new
+  end
 end
