@@ -13,6 +13,12 @@ task :rubocop do
   sh 'bundle exec rubocop -a --format html --out report/rubocop/rubocop_report.html'
 end
 
+desc 'Executar os endpoints de health check'
+task :health_check do ||
+  clean_prj
+  sh "bundle exec cucumber -t@healthcheck"
+end
+
 desc 'Executar as features criticas sequencial'
 task :smoke_tests, [:ambiente] do |_t, args|
   clean_prj
