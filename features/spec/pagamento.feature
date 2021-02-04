@@ -14,7 +14,6 @@ Funcionalidade: Testar as funcionalidade de Pagamento
     Entao verifico o status code 200
     E que o resultado não é nulo
 
-  @wip
   Cenário: Verificar busca de pagamento específico
     Dado que acesso o endpoint "/pagamento/" passando um id de pagamento
     Entao verifico o status code 200

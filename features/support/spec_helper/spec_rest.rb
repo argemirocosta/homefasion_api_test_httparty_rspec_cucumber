@@ -14,4 +14,8 @@ module REST
   def pagamento
     Rest::Pagamento.new
   end
+
+  def venda
+    Rest::Venda.new
+  end
 end
