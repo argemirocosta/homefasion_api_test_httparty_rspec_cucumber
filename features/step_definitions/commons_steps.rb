@@ -6,6 +6,10 @@ Entao('verifico o status code {int}') do |code|
   expect(@response.code).to eq code
 end
 
-E('a mensagem {string}') do |mensagem|
+Entao('a mensagem {string}') do |mensagem|
   expect(@response.body).to eq mensagem
+end
+
+Entao('que o resultado não é nulo') do
+  expect(@response.body).not_to be_empty
 end
