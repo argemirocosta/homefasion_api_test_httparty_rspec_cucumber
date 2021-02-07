@@ -14,9 +14,9 @@ task :rubocop do
 end
 
 desc 'Executar os endpoints de health check'
-task :health_check do ||
+task :health_check do
   clean_prj
-  sh "bundle exec cucumber -t@healthcheck"
+  sh 'bundle exec cucumber -t@healthcheck'
 end
 
 desc 'Executar as features criticas sequencial'

@@ -20,3 +20,8 @@ Funcionalidade: Testar as funcionalidade de Usuário
     Dado que acesso o endpoint "/usuarios/" passando um id de usuario
     Entao verifico o status code 200
     E o id do usuario
+
+  @cadastro
+  Cenário: Cadastrar usuário
+    Dado que acesso o endpoint "/usuarios" para realizar um cadastro de "usuarios"
+    Entao verifico o status code 201
