@@ -9,7 +9,7 @@ Funcionalidade: Testar as funcionalidade de Cliente
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
-  @listagem_geral
+  @listagem_geral @smoke
   Cenário: Verificar listagem de todos os clientes
     Dado que acesso o endpoint "/cliente"
     Entao verifico o status code 200
@@ -21,7 +21,7 @@ Funcionalidade: Testar as funcionalidade de Cliente
     Entao verifico o status code 200
     E o id do cliente
 
-  @cadastro
+  @cadastro @smoke
   Cenário: Cadastrar cliente
     Dado que acesso o endpoint "/cliente" para realizar um cadastro de "cliente"
     Entao verifico o status code 201

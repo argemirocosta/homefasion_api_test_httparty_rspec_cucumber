@@ -9,7 +9,7 @@ Funcionalidade: Testar as funcionalidade de Usuário
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
-  @listagem_geral
+  @listagem_geral @smoke
   Cenário: Verificar listagem de todos os usuários
     Dado que acesso o endpoint "/usuarios"
     Entao verifico o status code 200
@@ -21,7 +21,7 @@ Funcionalidade: Testar as funcionalidade de Usuário
     Entao verifico o status code 200
     E o id do usuario
 
-  @cadastro
+  @cadastro @smoke
   Cenário: Cadastrar usuário
     Dado que acesso o endpoint "/usuarios" para realizar um cadastro de "usuarios"
     Entao verifico o status code 201

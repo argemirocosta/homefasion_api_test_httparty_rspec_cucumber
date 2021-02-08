@@ -9,7 +9,7 @@ Funcionalidade: Testar as funcionalidade de Venda
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
-  @listagem_geral
+  @listagem_geral @smoke
   Cenário: Verificar listagem de todos as vendas
     Dado que acesso o endpoint "/venda"
     Entao verifico o status code 200

@@ -9,7 +9,7 @@ Funcionalidade: Testar as funcionalidade de Pagamento
     Então verifico o status code 200
     E a mensagem "Servidor no ar"
 
-  @listagem_geral
+  @listagem_geral @smoke
   Cenário: Verificar listagem de todos os pagamentos
     Dado que acesso o endpoint "/pagamento"
     Entao verifico o status code 200

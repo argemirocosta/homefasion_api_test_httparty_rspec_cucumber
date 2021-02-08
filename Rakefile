@@ -13,28 +13,28 @@ task :rubocop do
   sh 'bundle exec rubocop -a --format html --out report/rubocop/rubocop_report.html'
 end
 
+desc 'Mostrar métodos a serem implementados'
+task :dry do
+  clean_prj
+  sh 'cucumber --dry-run'
+end
+
 desc 'Executar os endpoints de health check'
-task :health_check do
+task :health do
   clean_prj
   sh 'bundle exec cucumber -t@healthcheck'
 end
 
-desc 'Executar as features criticas sequencial'
-task :smoke_tests, [:ambiente] do |_t, args|
+desc 'Executar os endpoints smoke tests'
+task :smoke do
+  clean_prj
+  sh 'bundle exec cucumber -t@smoke'
+end
+
+desc 'Executar testes em ambiente específico'
+task :ambiente,[:ambiente] do |_t, args|
   clean_prj
   sh "bundle exec cucumber -p #{args[:ambiente]}"
-end
-
-desc 'Executar as features por tags sequencial'
-task :smoke_tags, [:ambiente, :tag] do |_t, args|
-  clean_prj
-  sh "bundle exec cucumber -p #{args[:ambiente]} -t #{args[:tag]}"
-end
-
-desc 'Executar regressao paralela'
-task :regression_tests, [:ambiente, :seq] do |_t, args|
-  clean_prj
-  sh "bundle exec parallel_cucumber features/ -n #{args[:seq]} -o '-p #{args[:ambiente]}'"
 end
 
 def clean_prj
