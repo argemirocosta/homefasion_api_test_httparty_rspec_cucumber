@@ -1,7 +1,7 @@
 class UsuariosModel
   attr_accessor :nome, :login, :senha, :ativo
 
-  def usuarios_hash
+  def gerador_hash
     {
       nome: @nome,
       login: @login,

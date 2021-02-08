@@ -20,3 +20,8 @@ Funcionalidade: Testar as funcionalidade de Cliente
     Dado que acesso o endpoint "/cliente/" passando um id de cliente
     Entao verifico o status code 200
     E o id do cliente
+
+  @cadastro @wip
+  Cenário: Cadastrar cliente
+    Dado que acesso o endpoint "/cliente" para realizar um cadastro de "cliente"
+    Entao verifico o status code 201

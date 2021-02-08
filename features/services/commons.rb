@@ -12,6 +12,7 @@ module Rest
 
     def post_commons(path, payload)
       auth = { username: 'usuario1', password: 'senha1' }
+      print payload.to_json
       self.class.post(path, basic_auth: auth, body: payload.to_json)
     end
   end

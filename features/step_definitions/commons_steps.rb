@@ -15,6 +15,7 @@ Entao('que o resultado não é nulo') do
 end
 
 Dado('que acesso o endpoint {string} para realizar um cadastro de {string}') do |path, tipo|
-  @payload = build(tipo).usuarios_hash
+  print tipo
+  @payload = build(tipo).gerador_hash
   @response = commons.post_commons(path, @payload)
 end
